@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Day 3: Master of Selectors</title>
+
+    <style>
+      /* --- 1. UNIVERSAL SELECTOR (*) --- */
+      /* often used for resetting margins/padding */
+
+      /* --- 2. ELEMENT SELECTOR (Tag Name) --- */
+      /* target all buttons or h2s */
+
+      /* --- 3. ID SELECTOR (#) --- */
+      /* target the #unique-header */
+
+      /* --- 4. CLASS SELECTOR (.) --- */
+      /* target .card and .highlight */
+
+      /* --- 5. DESCENDANT (Space) vs CHILD (>) --- */
+      /* Try: .container p (Selects ALL p inside) */
+      /* Try: .container > p (Selects only DIRECT children) */
+
+      /* --- 6. ADJACENT SIBLING (+) --- */
+      /* Target the paragraph immediately after the <h3> */
+
+      /* --- 7. ATTRIBUTE SELECTOR ([attr]) --- */
+      /* Target input[type="text"] vs input[type="password"] */
+
+      /* --- 8. PSEUDO-CLASSES (:hover, :active, :nth-of-type) --- */
+      /* Style the button on hover */
+      /* Style even/odd list items */
+
+      /* --- 9. PSEUDO-ELEMENTS (::first-letter, ::selection) --- */
+      /* Make the first letter of the story giant */
+      /* Change the color when highlighting text */
+    </style>
+  </head>
+  <body>
+
+
+    <nav id="nav">
+        <a id="anchor" href="www.google.com">GOOGLE</a>
+        <div>
+            <a href="">Youtube</a>
+        </div>
+    </nav>
+
+    <header id="unique-header">
+      <h1 id="welcome-text" class="welcome-text">Welcome to CSS Selectors</h1>
+      <p class="background-yellow" id="wecome-para">
+        This header has a unique ID.
+      </p>
+    </header>
+
+    <section>
+      <div class="card">
+        <h2>Student Card 1</h2>
+        <p class="highlight">This text is important (Class: highlight).</p>
+        <button>View Profile</button>
+      </div>
+
+      <div class="card">
+        <h2>Student Card 2</h2>
+        <p class="background-yellow">This is normal text.</p>
+        <button>View Profile</button>
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="container">
+      <h3 class="bg-red">Combinator Testing Area</h3>
+
+      <p class="background-yellow">
+        I am a direct child of .container (Child & Descendant)
+      </p>
+
+      <div>
+        <p>I am inside a div, inside .container (Descendant only)</p>
+      </div>
+
+      <h3>Sibling Test Header</h3>
+      <p>I am immediately after the H3 (Adjacent Sibling)</p>
+      <p>I am the second paragraph (Not adjacent)</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3>Form Styling (Attribute Selectors)</h3>
+      <form>
+        <label>Username:</label>
+        <input class="input-box" type="text" placeholder="Enter name" />
+        <br /><br />
+
+        <label>Password:</label>
+        <input class="input-box" type="password" placeholder="Enter password" />
+        <br /><br />
+
+        <label>Subscribe:</label>
+        <input class="input-box" type="checkbox" checked />
+      </form>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3 class="bg-red">List Logic (:nth-of-type)</h3>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+      </ul>
+
+      <h3>The Story (::first-letter & ::selection)</h3>
+      <div id="last-div">
+        <p class="story">
+          Once upon a time, there was a developer learning CSS. They selected
+          this text to see the custom highlight color! (Try highlighting this
+          text with your mouse).
+        </p>
+      </div>
+    </section>
+
+    <br /><br /><br /><br />
+  </body>
+</html>

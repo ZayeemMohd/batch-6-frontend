@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* #box {
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+  margin: 20px;
+
+  transition:
+    width 2s ease-in-out 0s,
+    background-color 2s ease-in-out 0s,
+    border-radius 2s ease-in-out 0s;
+} */
+
+/* #box:hover {
+  background-color: red;
+  width: 700px;
+  border-radius: 50px;
+} */
+
+/* #box2 {
+  height: 200px;
+  width: 200px;
+  background-color: orange; */
+/* transform: skew(-10deg); */
+
+/* transition: transform 2s ease-in 0s; */
+
+/* margin: 50px auto; */
+
+/* transition: border-radius 1s ease-in 0s, margin-top 2s ease-in-out, transform 3s ease-in; */
+/* transition: transform 1s ease-in; */
+/* } */
+
+/* #box2:hover { */
+/* border-radius: 20px 50% 20px 50%; */
+/* border-radius: 50%;
+  margin-left: 500px; */
+/* transform: rotate(45deg); */
+/* } */
+
+/* #box2:hover {
+    transform: scale(2) rotate(-45deg) translate(100px, 100px);
+}
+
+h1{
+    opacity: 0;
+  
+    transition: opacity 2s ease-in 0s;
+}
+
+h1:hover {
+ opacity: 1;
+} */
+
+/* #container {
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+} */
+
+/* #box1 {
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+}
+
+#box2 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+
+  position: absolute;
+  top: 150px;
+  z-index: -1;
+}
+
+#box3 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+} */
+
+#navbar {
+  background-color: rgba(59, 95, 95, 0.739);
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  top: 0;
+}
+
+p {
+  margin-top: 80px;
+}

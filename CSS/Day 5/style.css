@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  color: blue;
+  font-size: 50px;
+  font-family: cursive;
+  height: 50vh;
+} */
+/* 
+#parent {
+  color: brown;
+  background-color: pink;
+  height: 500px;
+  width: 500px;
+  border: 1px solid black;
+} */
+
+/* span {
+  display: inline-block;
+  border: 1px solid black;
+  height: 100px;
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+}
+
+#child {
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+form {
+  background-color: red;
+}
+
+input {
+  background-color: inherit;
+}
+
+button {
+  background-color: inherit;
+} */
+
+/* h1, p {
+  display: inline;
+} */
+
+/* #google {
+  display: none;
+  visibility: hidden;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+} */
+
+/* #section {
+  background-color: rgb(176, 176, 179);
+  width: 100%;
+  height: 500px;
+} */
+
+/* #parent {
+  width: 500px;
+  height: 500px;
+  background-color: pink;
+  font-size: 16px;
+}
+
+#child {
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  font-size: 1.5em;
+} */
+
+#level1 {
+  font-size: 1rem;
+  /* 16px */
+}
+
+#level2 {
+  font-size: 1rem;
+  /* 16px */
+}
+
+#level3 {
+  font-size: 1rem;
+  /* 16px */
+}
+
+#level4 {
+  font-size: 1rem;
+  /* 16px  */
+}
+
+#container {
+  height: 50vh;
+  width: 50vw;
+  background-color: aquamarine;
+}
+
+#section1 {
+  background-color: rgb(82, 120, 120);
+  width: 100vw;
+  height: 100vh;
+}
+
+#section2 {
+  background-color: rgb(133, 182, 182);
+  width: 100vw;
+  height: 100vh;
+}
+
+#section3 {
+  background-color: rgb(208, 208, 208);
+  width: 100vw;
+  height: 100vh;
+}

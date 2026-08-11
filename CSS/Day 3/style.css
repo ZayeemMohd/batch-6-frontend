@@ -1,0 +1,85 @@
+/* rule-set
+
+/* selector {
+    property: value;
+} */
+/* 
+p {
+  background-color: blue;
+}
+
+#welcome-text {
+  background-color: yellow;
+  color: red;
+}
+
+.input-box {
+  background-color: brown;
+}
+
+.background-yellow {
+  color: red;
+  background-color: yellow;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+div p {
+}
+
+#last-div > p {
+  background-color: black;
+}
+
+nav a {
+  color: brown;
+} */
+
+/* input[type="password"] {
+  background-color: red;
+}
+
+a[href="www.google.com"] {
+  background-color: black;
+}
+
+h1:hover {
+  background-color: red;
+}
+
+input:hover {
+  background-color: gray;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: blue;
+} */
+
+/* li:nth-of-type(2n) {
+  background-color: red;
+}
+
+.story::selection {
+  color: red;
+  background-color: yellow;
+} */
+
+/* 
+p {
+    background-color: yellow;
+    color: red;
+}
+
+p {
+    background-color: black;
+} */
+
+#anchor{
+    background-color: red;
+}
+
+#nav a {
+    background-color: blue;
+}

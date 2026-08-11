@@ -1,0 +1,29 @@
+/* h1 {
+  color: red;
+  background-color: black;
+}
+
+p {
+  color: blue;
+  background-color: yellow;
+}
+
+a {
+  background-color: yellow;
+} */
+
+h2 {
+  /*   rgb(red, green, blue) */
+  background-color: #fca311;
+  color: #e5e5e5;
+}
+
+button {
+  color: white;
+  background-color: blue;
+}
+
+p {
+  background-color: black;
+  color: white;
+}
