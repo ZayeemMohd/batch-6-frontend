@@ -112,9 +112,157 @@
 //   console.log(i);
 // }
 
-for (let i = 1; i <= 100; i++) {
-  if (i >= 7 && i <= 10) {
-    continue;
+// for (let i = 1; i <= 100; i++) {
+//   if (i >= 7 && i <= 10) {
+//     continue;
+//   }
+//   console.log("loop", i);
+// }
+
+// let cities = ["hyderabad", "mumbai", "delhi", "chennai", "kolkata"];
+
+// // console.log(cities[0]);
+// // console.log(cities[1]);
+// // console.log(cities[2]);
+// // console.log(cities[3]);
+
+// // last_index = length - 1
+
+// for (let i = 0; i < cities.length; i++) {
+//   console.log(cities[i]);
+// }
+
+// let scores = [85, 92, 78, 95, 88];
+
+// // accumulaor pattern
+// let total = 0;
+
+// for (let i = 0; i < scores.length; i++) {
+//   total = total + scores[i];
+// }
+
+// console.log(total)
+
+// 0 - 10
+
+// let total = 0;
+
+// for (let i = 0; i <= 10; i++) {
+//   total += i;
+// }
+
+// console.log(total);
+
+// let scores = [85, 92, 78, 95, 88];
+
+// let a = 10;
+// let b = 50;
+// let c = 2;
+
+// if (a > b) {
+//   if (a > c) {
+//     console.log("a is maximum");
+//   } else {
+//     console.log("c is maximum");
+//   }
+// } else {
+//   if (b > c) {
+//     console.log("b is maximum");
+//   } else {
+//     console.log("c is maximum");
+//   }
+// }
+
+// let scores = [85, 92, 78, 95, 88];
+
+// let max = scores[0];
+
+// for (let i = 0; i < scores.length; i++) {
+//   if (scores[i] > max) {
+//     max = scores[i];
+//   }
+// }
+
+// console.log(max)
+
+// special loops: for-of
+
+// let colors = ["Red", "Blue", "Green", "Yellow"];
+
+// for(let color of colors){
+//   console.log(color)
+// }
+
+// let cities = ["hyderabad", "mumbai", "delhi", "chennai", "kolkata"];
+
+// for (let city of cities) {
+//   console.log(city);
+// }
+
+// for (let i = 0; i < cities.length; i++) {
+//   let city = cities[i];
+//   console.log(city);
+// }
+
+// let iplTeams = [
+//   ["hyderabad", "warangal", "adilabad", "mehboobnagar"],
+//   ["mirzapur", "allahbad", "muzaffarnagar"],
+// ];
+
+// iplTeams[0][0]
+// iplTeams[0][1]
+// iplTeams[0][2]
+
+// iplTeams[1][0]
+// iplTeams[1][1]
+// iplTeams[1][2]
+
+// for (let i = 0; i < iplTeams.length; i++) {
+//   for (let j = 0; j < iplTeams[i].length; j++) {
+//     console.log(iplTeams[i][j]);
+//   }
+// }
+
+// let iplTeams = [
+//   ["hyderabad", "warangal", "adilabad", "mehboobnagar"],
+//   ["mirzapur", "allahbad", "muzaffarnagar"],
+// ];
+
+// for(let team of iplTeams){
+
+//   for(let city of team){
+//     console.log(city)
+//   }
+
+// }
+
+// let city = "Hyderabad";
+
+// for (let i = 0; i < city.length; i++) {
+//   console.log(city[i]);
+// }
+
+// for(let letter of city){
+//   console.log(letter)
+// }
+
+let movie = "bahubali";
+
+let userInput = prompt("Enter your guess: ");
+
+let attempts = 0;
+
+while (userInput !== movie && userInput !== "quit") {
+  if (attempts < 3) {
+    userInput = prompt("Enter you guess again: ");
+    attempts++;
+  } else {
+    break;
   }
-  console.log(i);
+}
+
+if (userInput === movie) {
+  console.log("congrats you got it right");
+} else {
+  console.log("You ran out of attempts");
 }
