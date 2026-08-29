@@ -167,3 +167,150 @@
 // // console.log(firstVar);
 
 // firstVar();
+
+// 1. input
+// 2. Logic
+// 3. output
+
+// method 1
+// function definiton
+// function sum(a, b, c){
+//     console.log("Function ran...")
+//     let result = a + b + c;
+//     return result
+// }
+
+// // funciton calling
+// let result = sum(2, 4, 5)
+
+// console.log(result)
+
+// method 2
+// function expression
+// let sum = function (a, b) {
+//   let result = a + b;
+//   return result;
+// };
+
+// let result = sum(1, 2);
+// console.log(result);
+
+// method 3
+// Arrow function
+// let mul = (a, b) => {
+//   return a *b;
+// };
+
+// let result = mul(2, 4);
+// console.log(result);
+
+// shotcut
+// let mul = (a, b) => a * b;
+
+// let result = mul(2, 4);
+// console.log(result);
+
+// let sqrt = num => num * num;
+
+// console.log(sqrt(3));
+
+// let cube = num => num * num * num
+
+// console.log(cube(2))
+
+// function sum(a, b, c) {
+//   let result = a + b + c;
+//   return result;
+// }
+
+// // console.log(sum)
+
+// // Higher order functions
+// function greet(sumFn) {
+
+//   return
+
+// }
+
+// greet(sum);
+
+// Higher order function
+// function manager() {
+//   let sum = (a, b) => {
+//     console.log(a + b);
+//   };
+
+//   return sum;
+// }
+
+// let returnValue = manager();
+
+// console.log(returnValue);
+
+// let greet = () => {
+//   console.log("Hello world");
+// };
+
+// function repeatFn(userFn, userCount){
+//     for(let i = 1; i <= userCount; i++){
+//         userFn()
+//     }
+// }
+
+// repeatFn(greet, 4)
+
+// let greet = () => {
+//   console.log("hello world");
+// };
+
+// // create a function that runs children function 3 times
+
+// // repeat: Higher order function
+// function repeat3times(userFn, repeatCount) {
+//   // let userFn = () => {
+//   // console.log("hello world")
+//   // }
+
+//   for (let i = 1; i <= repeatCount; i++) {
+//     userFn();
+//   }
+// }
+
+// // greet: callback function
+// repeat3times(greet, 10);
+
+// let user1 = {
+//   // property = key: value
+//   username: "Amir Khan",
+//   city: "hyderbad",
+//   phoneNumber: 8734343030,
+//   // method = function in an object
+//   greet: function () {
+//     console.log("Hello Amir Khan");
+//   },
+
+// };
+
+// user1.city
+//  user1.greet()
+
+// let city = 'hyderabad'
+
+// city.slice(1, 2)
+
+let Math = {
+  PI: 3.14,
+  sum: function (a, b) {
+    console.log(a + b);
+  },
+  mul: (a, b) => {
+    console.log(a * b);
+  },
+  div(a, b) {
+    console.log(a / b);
+  },
+};
+
+Math.div(4, 2)
+Math.sum(2, 3)
+Math.mul(2, 2)
