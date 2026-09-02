@@ -128,3 +128,44 @@ function sum(a, b) {
 // setTimeout(() => {
 //   clearInterval(intervelid1);
 // }, 3000);
+
+// Anonomous function (callback function)
+
+// setTimeout: Higher order function
+
+// setTimeout(() => {
+//   console.log("Hello world")
+// }, 1000)
+
+// let count = 0; // 1 , 2 , 3
+
+// const intervalId1 = setInterval(() => {
+//   console.log(count);
+//   count = count + 1;
+
+//   if (count > 10) {
+//     console.log("Inside if statement");
+//     clearInterval(intervalId1);
+//   }
+// }, 1000);
+
+
+
+// const student1 = {
+//   name: "Mohd",
+//   marks: 90,
+
+//   printMarks: function () {
+//     console.log(this.marks);
+//   },
+
+//   delayedPrintMarks: function () {
+
+//     setTimeout( () => {
+//       console.log(this.marks);
+//     }, 1000);
+
+//   },
+// };
+
+// student1.delayedPrintMarks();
