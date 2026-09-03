@@ -215,9 +215,149 @@
 
 // printSum(3)
 
-function printMax(a, ...num) {
-  console.log(num);
-  console.log(a);
-}
+// function printMax(a, ...num) {
+//   console.log(num);
+//   console.log(a);
+// }
 
-printMax(1, 2, 3, 4, 5, 6);
+// printMax(1, 2, 3, 4, 5, 6);
+
+// function printHello(name = "Abc"){
+//   console.log("Hello", name)
+// }
+
+// printHello("Ali")
+
+// rest operator ...ParameterName
+
+// fn definition
+// function maximum(...numbers){
+//       console.log(numbers)
+// }
+
+// // calling
+// maximum(1, 3, 5, 6, 7 ,2)
+
+// function calculator(opreration, ...numbers) {
+//   // let numbers = [3, 4, 6]
+
+//   let sum = numbers.reduce((acc, elem) => {
+//     return acc + elem;
+//   });
+
+//   if (opreration === "sum") {
+//     console.log(sum);
+//   }
+// }
+
+// calculator("sum", 3, 4, 5, 9);
+
+// let numbers = [2, 3, 4, 6, 9];
+
+// console.log(numbers[0], numbers[1], numbers[2], numbers[3])
+
+// ...numbers = numbers[0], numbers[1], numbers[2], numbers[3]
+
+// console.log(numbers[0], numbers[1], numbers[2], numbers[3]);
+
+//  let numbers = [2, 3, 4, 6, 9];
+
+//  let maximumVal = Math.max(...numbers)
+
+//  console.log(maximumVal)
+
+// let numbers = [2, 3, 4, 6, 9];
+
+// let copyArr = [...numbers]
+
+// console.log(copyArr);
+
+// let numbers = [2, 3, 4];
+
+// let newArray = [1, ...numbers, 5, 6, 7];
+// console.log(newArray);
+
+// let city = "hyderabad";
+// let cityArr = [...city];
+
+// console.log(cityArr);
+// console.log("h", "y")
+
+// let user = {
+//   name: "Tony Stark",
+//   email: "tony@stark.com",
+//   age: 40
+// };
+
+// let newUser = {
+//   ...user,
+//   city: "New York",
+//   superPower: "Iron man suit",
+// };
+
+// console.log(newUser);
+
+// let colors = ["Red", "Green", "Blue"];
+
+// // let first = colors[0];
+// // let second = colors[1]
+// // let third = colors[2]
+
+// // console.log(third)
+
+// let [first, second, third] = colors;
+
+// console.log(second);
+
+// let numbers = [1, 2, 3, 4, 5];
+
+// let [, two, , four] = numbers;
+
+// console.log(two, four);
+
+// let student = {
+//   name: "Rahul",
+//   age: 20,
+//   grade: "A",
+// };
+
+// let name = student.name
+
+// let username = student.name;
+// let userage = student.age;
+// let grade = student.grade
+
+// console.log(username);
+
+// let { name, age } = student;
+
+// console.log(name)
+
+// console.log(username);
+// console.log(userage)
+
+// Object destructure
+
+// 1. Object destructure with same keys: let { name, age } = student;
+// 2. Object destructue with different keys: let {name: username} = student
+// 3. Default in destructure
+
+// let student = {
+//   name: "Rahul",
+//   grade: "A",
+//   age: 22
+// };
+
+// let { name, age = 18 } = student;
+
+// console.log(name);
+// console.log(age);
+
+// let numbers = [1, ];
+
+// let [first, second = 2] = numbers;
+
+// console.log(first);
+// console.log(second);
+
+
