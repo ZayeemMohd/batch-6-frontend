@@ -95,31 +95,120 @@
 // btn1.style.top = "0px";
 // btn1.style.bottom = "0px";
 
-// document.addEventListener("keydown", (event) => {
-//   //   console.log("event is clicked and this event object recieved:: ", event);
+document.addEventListener("keydown", (event) => {
+  //   console.log("event is clicked and this event object recieved:: ", event);
 
-//   if (event.code === "ArrowUp") {
-//     btn1.style.top = parseInt(btn1.style.top) - 10 + "px";
-//   } else if (event.code === "ArrowDown") {
-//     btn1.style.top = parseInt(btn1.style.top) + 10 + "px";
-//   } else if (event.code === "ArrowLeft") {
-//     console.log("moving left");
-//   } else if (event.code === "ArrowRight") {
-//     console.log("moving right");
-//   }
+  if (event.code === "ArrowUp") {
+    btn1.style.top = parseInt(btn1.style.top) - 10 + "px";
+  } else if (event.code === "ArrowDown") {
+    btn1.style.top = parseInt(btn1.style.top) + 10 + "px";
+  } else if (event.code === "ArrowLeft") {
+    console.log("moving left");
+  } else if (event.code === "ArrowRight") {
+    console.log("moving right");
+  }
+});
+
+// const form = document.querySelector("form");
+// const emailBox = document.querySelector("#email-inp");
+// const passBox = document.querySelector("#pass-inp");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+
+//   const inputVal = emailBox.value;
+//   const passVal = passBox.value;
+
+//   console.log(inputVal, passVal);
+
+//   // backend call
 // });
 
-const form = document.querySelector("form");
-const emailBox = document.querySelector("#email-inp");
-const passBox = document.querySelector("#pass-inp");
+// const heading1 = document.querySelector("#heading1");
+// console.log(heading1.innerText);
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+// const form = document.querySelector("form");
 
-  const inputVal = emailBox.value;
-  const passVal = passBox.value;
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  console.log(inputVal, passVal);
+//   // step1: getting input value
+//   const emailInp = document.querySelector("#email-inp");
+//   const passInp = document.querySelector("#pass-inp");
 
-  // backend call
+//   const user = {
+//     email: emailInp.value,
+//     password: passInp.value,
+//   };
+
+//   // backend call send this user object
+//   console.log(user);
+
+//   emailInp.value = "";
+//   passInp.value = "";
+// });
+
+// some events realted to input box
+
+// const searchBox = document.querySelector("#sample-inp");
+
+// searchBox.addEventListener("change", () => {
+//   const userInput = searchBox.value;
+
+//   console.log("Generating suggestions for input:: ", userInput);
+// });
+
+// const inputBox = document.querySelector("#text-inp");
+// const paraBox = document.querySelector("#para");
+
+// inputBox.addEventListener("input", () => {
+//   paraBox.innerText = inputBox.value;
+// });
+
+// const box = document.querySelector("#box");
+// const para = document.querySelector("#para")
+// const btn = document.querySelector("#btn")
+
+// btn.addEventListener("click", ()=>{
+
+//   const red = Math.floor(Math.random() * 256) // 0-255
+//   const green = Math.floor(Math.random() * 256) // 0-255
+//   const blue = Math.floor(Math.random() * 256) // 0-255
+
+//   box.style.backgroundColor = `rgb(${red}, ${green}, ${blue})` // "rgb(233, 234, 9)"
+//   para.innerText = `rgb(${red}, ${green}, ${blue})`
+// })
+
+const inputBox = document.querySelector("#input-box");
+const addTodoBtn = document.querySelector("#add-todo-btn");
+
+function deleteFn() {
+  console.log("delete button clicked");
+}
+
+let counter = 0;
+
+addTodoBtn.addEventListener("click", () => {
+  const div = document.createElement("div");
+  div.setAttribute("id", counter);
+
+  counter++;
+
+  const newParaTag = document.createElement("p");
+  newParaTag.innerHTML = inputBox.value;
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.innerText = "Delete";
+  deleteBtn.setAttribute("onclick", "deleteFn()");
+
+  const editBtn = document.createElement("button");
+  editBtn.innerText = "Edit";
+
+  div.insertAdjacentElement("afterbegin", editBtn);
+  div.insertAdjacentElement("afterbegin", deleteBtn);
+  div.insertAdjacentElement("afterbegin", newParaTag);
+
+  addTodoBtn.insertAdjacentElement("afterend", div);
+
+  inputBox.value = "";
 });

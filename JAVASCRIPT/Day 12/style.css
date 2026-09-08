@@ -1,4 +1,38 @@
-.like-btn {
+/* .like-btn {
   background-color: red;
   color: white;
+} */
+
+/* body {
+  background-color: rgb(190, 175, 145);
+} */
+
+#box {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  margin: 10px auto;
+}
+
+#btn {
+    display: block;
+   margin: 0px auto;
+}
+
+#para {
+  text-align: center;
+}
+
+
+div{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+
+div > button {
+  height: 30px;
+  width: 100px;
+
 }
