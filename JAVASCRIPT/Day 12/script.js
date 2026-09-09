@@ -181,34 +181,48 @@ document.addEventListener("keydown", (event) => {
 
 const inputBox = document.querySelector("#input-box");
 const addTodoBtn = document.querySelector("#add-todo-btn");
-
-function deleteFn() {
-  console.log("delete button clicked");
-}
-
-let counter = 0;
+const todoContainer = document.querySelector("#todo-container");
 
 addTodoBtn.addEventListener("click", () => {
   const div = document.createElement("div");
-  div.setAttribute("id", counter);
 
-  counter++;
-
-  const newParaTag = document.createElement("p");
-  newParaTag.innerHTML = inputBox.value;
+  // creating an input element to store todo, instead of using paragraph element
+  const newTodoInput = document.createElement("input");
+  newTodoInput.value = inputBox.value;
+  newTodoInput.classList.add("new-todo-input");
 
   const deleteBtn = document.createElement("button");
   deleteBtn.innerText = "Delete";
-  deleteBtn.setAttribute("onclick", "deleteFn()");
+  deleteBtn.addEventListener("click", function () {
+    this.parentElement.remove();
+  });
 
   const editBtn = document.createElement("button");
   editBtn.innerText = "Edit";
 
-  div.insertAdjacentElement("afterbegin", editBtn);
-  div.insertAdjacentElement("afterbegin", deleteBtn);
-  div.insertAdjacentElement("afterbegin", newParaTag);
+  // Edit button toggle logic
+  let isEdit = false;
+  newTodoInput.readOnly = true; // cannot edit newly created input box to store todo
 
-  addTodoBtn.insertAdjacentElement("afterend", div);
+  editBtn.addEventListener("click", function () {
+    // toggle functionality
+    if (isEdit === false) {
+      isEdit = true;
+      newTodoInput.readOnly = false; // now, you can edit the todoInputBox 
+      newTodoInput.focus(); // auto focus the keyboard to input field
+      this.innerText = "Save";
+    } else {
+      isEdit = false;
+      newTodoInput.readOnly = true; // now, you cannot edit the todoInputBox 
+      this.innerText = "Edit";
+    }
+  });
+
+  div.insertAdjacentElement("afterbegin", deleteBtn);
+  div.insertAdjacentElement("afterbegin", editBtn);
+  div.insertAdjacentElement("afterbegin", newTodoInput);
+
+  todoContainer.insertAdjacentElement("beforeend", div);
 
   inputBox.value = "";
 });

@@ -7,7 +7,7 @@
   background-color: rgb(190, 175, 145);
 } */
 
-#box {
+/* #box {
   height: 200px;
   width: 200px;
   border: 1px solid black;
@@ -15,24 +15,19 @@
 }
 
 #btn {
-    display: block;
-   margin: 0px auto;
+  display: block;
+  margin: 0px auto;
 }
 
 #para {
   text-align: center;
+} */
+
+.new-todo-input {
+  border: none;
+  margin: 10px;
 }
 
-
-div{
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-
-div > button {
-  height: 30px;
-  width: 100px;
-
+button {
+  margin: 10px;
 }
