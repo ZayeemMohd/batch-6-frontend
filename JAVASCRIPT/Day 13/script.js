@@ -59,19 +59,19 @@ const h1 = document.querySelector("h1");
 
 // problem
 
-setTimeout(() => {
-  h1.style.color = 'red'
-}, 2000);
+// setTimeout(() => {
+//   h1.style.color = 'red'
+// }, 2000);
 
-setTimeout(() => {
-  h1.style.color = 'yellow'
-}, 2000);
+// setTimeout(() => {
+//   h1.style.color = 'yellow'
+// }, 2000);
 
-setTimeout(() => {
-  h1.style.color = 'green'
-}, 2000);
+// setTimeout(() => {
+//   h1.style.color = 'green'
+// }, 2000);
 
-console.log("finished")
+// console.log("finished")
 
 // function changeColor(color, callback) {
 
@@ -94,3 +94,51 @@ console.log("finished")
 //     });
 //   });
 // });
+
+// setTimeout(() => {
+//   console.warn("Red");
+// }, 1000);
+
+// setTimeout(() => {
+//   console.log("Green");
+// }, 1000);
+
+// setTimeout(() => {
+//   console.log("Yellow");
+// }, 1000);
+
+// console.log("finished");
+
+// let result;
+
+// function sum(callback) {
+//   setTimeout(() => {
+//     result = 22;
+
+//     callback();
+//   }, 2000);
+// }
+
+// function print() {
+//   console.log(result);
+// }
+
+// sum(() => {
+//   print();
+// }); // async -> bhot baad me -> pehle baad ku run ka muqa dedeta
+
+function changeColor(color, delay, callback) {
+  setTimeout(() => {
+    h1.style.color = color;
+
+    callback();
+  }, delay);
+}
+
+changeColor("red", 1000, () => {
+  changeColor("yellow", 1000, () => {
+    changeColor("green", 1000, () => {
+      console.log("finished");
+    });
+  });
+});
