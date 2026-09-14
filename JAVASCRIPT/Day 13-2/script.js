@@ -152,48 +152,160 @@
 
 // Example 7: Simple save messages to db functions
 
-function saveMsg1(callback) {
-  let delay = Math.floor(Math.random() * 5); // 0 - 4
-  setTimeout(() => {
-    console.log("Msg 1 saved...");
+// function saveMsg1(callback) {
+//   let delay = Math.floor(Math.random() * 5); // 0 - 4
+//   let isDBAvailable = Math.random() > 0.4;
 
-    callback(); //  saveMsg2();
-  }, delay * 1000);
-}
+//   setTimeout(() => {
+//     if (isDBAvailable) {
+//       console.log("Msg 1 saved...");
+//       callback(); //  saveMsg2(); // next message callback
+//     } else {
+//       console.log("Msg 1 not saved, but db was not available");
+//     }
+//   }, delay * 1000);
+// }
 
-function saveMsg2(callback) {
-  let delay = Math.floor(Math.random() * 5); // 0 - 4
-  setTimeout(() => {
-    console.log("Msg 2 saved...");
+// function saveMsg2(callback) {
+//   let delay = Math.floor(Math.random() * 5); // 0 - 4
+//   let isDBAvailable = Math.random() > 0.4;
 
-    callback(); // saveMsg3();
-  }, delay * 1000);
-}
+//   setTimeout(() => {
+//     if (isDBAvailable) {
+//       console.log("Msg 2 saved...");
+//       callback(); // saveMsg3();
+//     } else {
+//       console.log("Msg 2 not saved, but db was not available");
+//     }
+//   }, delay * 1000);
+// }
 
-function saveMsg3(callback) {
-  let delay = Math.floor(Math.random() * 5); // 0 - 4
-  setTimeout(() => {
-    console.log("Msg 3 saved...");
+// function saveMsg3(callback) {
+//   let delay = Math.floor(Math.random() * 5); // 0 - 4
+//   let isDBAvailable = Math.random() > 0.4;
 
-    callback(); //  console.log("All messages saved successfully...")
-  }, delay * 1000);
-}
+//   setTimeout(() => {
+//     if (isDBAvailable) {
+//       console.log("Msg 3 saved...");
+//       callback(); //  console.log("All messages saved successfully...")
+//     } else {
+//       console.log("Msg 3 not saved, but db was not available");
+//     }
+//   }, delay * 1000);
+// }
 
-saveMsg1(() => {
-  saveMsg2(() => {
-    saveMsg3(() => {
-      console.log("All messages saved successfully...");
-    });
-  });
-});
+// callback hell
+// saveMsg1(() => {
+//   saveMsg2(() => {
+//     saveMsg3(() => {
+//       console.log("All messages saved successfully...");
+//     });
+//   });
+// });
 
 // sync
 // console.log("js")
 // for()
 
-
-
 // async
 // setTimeout()
 // fetch();
 // setInterval()
+
+// Promises
+
+// 2 steps: 1: promise creation 2: promise consumption
+
+// handling aync operations using promises
+
+// 1: crate a promise object and return it from the async function
+
+function saveMsg1() {
+  return new Promise((resolve, reject) => {
+    let delay = Math.floor(Math.random() * 4);
+    let isDBAvailable = Math.random() > 0.4;
+
+    setTimeout(() => {
+      if (isDBAvailable) {
+        resolve("Train 1 reached ");
+      } else {
+        reject("Train 1 crashed");
+      }
+    }, delay * 1000);
+  });
+}
+
+function saveMsg2() {
+  return new Promise((resolve, reject) => {
+    let delay = Math.floor(Math.random() * 4);
+    let isDBAvailable = Math.random() > 0.4;
+
+    setTimeout(() => {
+      if (isDBAvailable) {
+        resolve("Train 2 reached");
+      } else {
+        reject("Train 2 crashed");
+      }
+    }, delay * 1000);
+  });
+}
+
+function saveMsg3() {
+  return new Promise((resolve, reject) => {
+    let delay = Math.floor(Math.random() * 4);
+    let isDBAvailable = Math.random() > 0.4;
+
+    setTimeout(() => {
+      if (isDBAvailable) {
+        resolve("Train 3 reahced");
+      } else {
+        reject("Train 3 crashed");
+      }
+    }, delay * 1000);
+  });
+}
+
+// promisified async function
+// saveMsg1()
+//   .then(() => {
+//     console.log("train 1 reached");
+
+//     saveMsg2()
+//       .then(() => {
+//         console.log("train 2 also reached");
+
+//         // async function: that returns a promise object
+//         saveMsg3()
+//           .then(() => {
+//             console.log("train 3 also reached");
+//           })
+//           .catch(() => {
+//             console.log("train crashed and 102 people dies");
+//           });
+//       })
+//       .catch(() => {
+//         console.log("train crashed and 102 people dies");
+//       });
+//   })
+//   .catch(() => {
+//     console.log("train crashed and 102 people dies");
+//   });
+
+// promise chaining
+
+saveMsg1()
+  .then((resolveMsg) => {
+    console.log(resolveMsg);
+    return saveMsg2();
+  })
+  .then((resolveMsg) => {
+    console.log(resolveMsg);
+    return saveMsg3();
+  })
+  .then((resolveMsg) => {
+    console.log(resolveMsg);
+    console.log("All trains for the day completed");
+  })
+  .catch((rejectMsg) => {
+    console.log(rejectMsg);
+  });
