@@ -70,7 +70,7 @@ function saveMsg3() {
 
 // step1: submitting registration form
 
-// creating promisified async function using 2. new Promise keyword
+// creating promisified async function using approach 1: new Promise keyword
 // function register() {
 //   return new Promise((resolve, reject) => {
 //     let delay = Math.floor(Math.random() * 3) * 1000; // creating a random delay in milliseconds
@@ -85,17 +85,20 @@ function saveMsg3() {
 //   });
 // }
 
-// creating promisified async function using 2. async keyword
+// creating promisified async function using approach 2: async keyword
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 async function register() {
   let delay = Math.floor(Math.random() * 3) * 1000; // creating a random delay in milliseconds
   let isPass = Math.random() > 0.2;
-  setTimeout(() => {
-    if (isPass) {
+
+  await wait(delay); // creating fake delay
+
+  if (isPass) {
       return "Registraion form submitted by user"; // return is equal to resolove() in async wala promisified fn
     } else {
       throw new Error("Registration form not submitted by user"); // throw is equal to reject() in async wala promisified fn
     }
-  }, delay);
 }
 
 function sendVerificationEmail() {
